@@ -40,6 +40,32 @@ class CosmicDesign:
         print("=" * 60 + "\n")
     
     @staticmethod
+    def print_instructions():
+        """사용 설명서 출력"""
+        print("📖 " + "=" * 56)
+        print(f"{CosmicDesign.STAR} 사용 방법 {CosmicDesign.STAR}")
+        print("📖 " + "=" * 56)
+        print()
+        print(f"  {CosmicDesign.CONSTELLATION} 1단계: 생년월일 입력")
+        print("     • 연도 입력 (예: 2010)")
+        print("     • 월 입력 (1~12, 예: 7월)")
+        print("     • 일 입력 (1~31, 예: 23일)")
+        print()
+        print(f"  {CosmicDesign.CONSTELLATION} 2단계: 당신의 별자리와 운세 확인")
+        print("     • 별자리 기호")
+        print("     • 별자리 특징")
+        print("     • 오늘의 운세")
+        print("     • 행운의 색과 숫자")
+        print()
+        print(f"  {CosmicDesign.CONSTELLATION} 3단계: 반복 여부 선택")
+        print("     • '네' → 다시 입력")
+        print("     • '아니요' → 프로그램 종료")
+        print()
+        print("💡 팁: 프로그램을 실행할 때마다 다른 운세가 나옵니다!")
+        print()
+        print("📖 " + "=" * 56 + "\n")
+    
+    @staticmethod
     def print_footer():
         """프로그램 푸터 출력"""
         print()
@@ -226,7 +252,7 @@ FORTUNES = {
     ],
     "전갈자리": [
         "집중력이 최고조에 이르는 시기입니다.",
-        "깊은 통찰력이 문제의 핵심을 꿰뚫을 것 같습니다.",
+        "깊은 통찰력이 문제��� 핵심을 꿰뚫을 것 같습니다.",
         "신비로운 기운이 당신을 감싸고 있습니다.",
         "숨겨진 진실이 드러날 것 같습니다.",
         "강한 의지가 모든 장애물을 극복하게 할 것 같습니다.",
@@ -340,6 +366,7 @@ def main():
     프로그램의 메인 함수
     """
     CosmicDesign.print_header()
+    CosmicDesign.print_instructions()
     
     while True:
         try:
