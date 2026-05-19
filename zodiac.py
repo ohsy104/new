@@ -7,6 +7,7 @@
 """
 
 import random
+import sys
 from datetime import datetime
 
 # ==================== 우주 스타일 디자인 요소 ====================
@@ -28,72 +29,72 @@ class CosmicDesign:
     @staticmethod
     def print_header():
         """프로그램 헤더 출력 (우주 스타일)"""
-        print("\n" + "=" * 60)
-        print(f"{CosmicDesign.SPACE} " * 8)
-        print(f"{CosmicDesign.STAR} " * 15)
-        print()
-        print(f"  {CosmicDesign.MOON}  별자리 운세 알려주는 프로그램  {CosmicDesign.SUN}")
-        print(f"  {CosmicDesign.GALAXY}  Cosmic Zodiac Fortune  {CosmicDesign.GALAXY}")
-        print()
-        print(f"{CosmicDesign.STAR} " * 15)
-        print(f"{CosmicDesign.SPACE} " * 8)
-        print("=" * 60 + "\n")
+        print("\n" + "=" * 60, flush=True)
+        print(f"{CosmicDesign.SPACE} " * 8, flush=True)
+        print(f"{CosmicDesign.STAR} " * 15, flush=True)
+        print(flush=True)
+        print(f"  {CosmicDesign.MOON}  별자리 운세 알려주는 프로그램  {CosmicDesign.SUN}", flush=True)
+        print(f"  {CosmicDesign.GALAXY}  Cosmic Zodiac Fortune  {CosmicDesign.GALAXY}", flush=True)
+        print(flush=True)
+        print(f"{CosmicDesign.STAR} " * 15, flush=True)
+        print(f"{CosmicDesign.SPACE} " * 8, flush=True)
+        print("=" * 60 + "\n", flush=True)
     
     @staticmethod
     def print_instructions():
         """사용 설명서 출력"""
-        print("📖 " + "=" * 56)
-        print(f"{CosmicDesign.STAR} 사용 방법 {CosmicDesign.STAR}")
-        print("📖 " + "=" * 56)
-        print()
-        print(f"  {CosmicDesign.CONSTELLATION} 1단계: 생년월일 입력")
-        print("     • 연도 입력 (예: 2010)")
-        print("     • 월 입력 (1~12, 예: 7월)")
-        print("     • 일 입력 (1~31, 예: 23일)")
-        print()
-        print(f"  {CosmicDesign.CONSTELLATION} 2단계: 당신의 별자리와 운세 확인")
-        print("     • 별자리 기호")
-        print("     • 별자리 특징")
-        print("     • 오늘의 운세")
-        print("     • 행운의 색과 숫자")
-        print()
-        print(f"  {CosmicDesign.CONSTELLATION} 3단계: 반복 여부 선택")
-        print("     • '네' → 다시 입력")
-        print("     • '아니요' → 프로그램 종료")
-        print()
-        print("💡 팁: 프로그램을 실행할 때마다 다른 운세가 나옵니다!")
-        print()
-        print("📖 " + "=" * 56 + "\n")
+        print("📖 " + "=" * 56, flush=True)
+        print(f"{CosmicDesign.STAR} 사용 방법 {CosmicDesign.STAR}", flush=True)
+        print("📖 " + "=" * 56, flush=True)
+        print(flush=True)
+        print(f"  {CosmicDesign.CONSTELLATION} 1단계: 생년월일 입력", flush=True)
+        print("     • 연도 입력 (예: 2010)", flush=True)
+        print("     • 월 입력 (1~12, 예: 7월)", flush=True)
+        print("     • 일 입력 (1~31, 예: 23일)", flush=True)
+        print(flush=True)
+        print(f"  {CosmicDesign.CONSTELLATION} 2단계: 당신의 별자리와 운세 확인", flush=True)
+        print("     • 별자리 기호", flush=True)
+        print("     • 별자리 특징", flush=True)
+        print("     • 오늘의 운세", flush=True)
+        print("     • 행운의 색과 숫자", flush=True)
+        print(flush=True)
+        print(f"  {CosmicDesign.CONSTELLATION} 3단계: 반복 여부 선택", flush=True)
+        print("     • '네' → 다시 입력", flush=True)
+        print("     • '아니요' → 프로그램 종료", flush=True)
+        print(flush=True)
+        print("💡 팁: 프로그램을 실행할 때마다 다른 운세가 나옵니다!", flush=True)
+        print(flush=True)
+        print("📖 " + "=" * 56 + "\n", flush=True)
     
     @staticmethod
     def print_footer():
         """프로그램 푸터 출력"""
-        print()
-        print("=" * 60)
-        print(f"{CosmicDesign.COMET} " * 15)
-        print(f"    우주의 신비로움이 당신의 운을 밝혀주길 {CosmicDesign.STAR_SPARKLE}")
-        print(f"{CosmicDesign.COMET} " * 15)
-        print("=" * 60 + "\n")
+        print(flush=True)
+        print("=" * 60, flush=True)
+        print(f"{CosmicDesign.COMET} " * 15, flush=True)
+        print(f"    우주의 신비로움이 당신의 운을 밝혀주길 {CosmicDesign.STAR_SPARKLE}", flush=True)
+        print(f"{CosmicDesign.COMET} " * 15, flush=True)
+        print("=" * 60 + "\n", flush=True)
     
     @staticmethod
     def print_zodiac_result(year, month, day, zodiac_sign, characteristics, fortune):
         """별자리 결과 출력 (우주 스타일)"""
-        print("\n" + "·" * 60)
-        print(f"{CosmicDesign.PLANET}  우주로부터의 메시지  {CosmicDesign.PLANET}")
-        print("·" * 60)
-        print()
-        print(f"  {CosmicDesign.MOON} 생년월일: {year}년 {month}월 {day}일")
-        print()
-        print(f"  {CosmicDesign.STAR_SPARKLE} 당신의 별자리: {CosmicDesign.CONSTELLATION} {zodiac_sign} {CosmicDesign.CONSTELLATION}")
-        print()
-        print(f"  {CosmicDesign.STAR} 별자리 특징:")
-        print(f"     {characteristics}")
-        print()
-        print(f"  {CosmicDesign.GALAXY} 오늘의 운세:")
+        print("\n" + "·" * 60, flush=True)
+        print(f"{CosmicDesign.PLANET}  우주로부터의 메시지  {CosmicDesign.PLANET}", flush=True)
+        print("·" * 60, flush=True)
+        print(flush=True)
+        print(f"  {CosmicDesign.MOON} 생년월일: {year}년 {month}월 {day}일", flush=True)
+        print(flush=True)
+        print(f"  {CosmicDesign.STAR_SPARKLE} 당신의 별자리: {CosmicDesign.CONSTELLATION} {zodiac_sign} {CosmicDesign.CONSTELLATION}", flush=True)
+        print(flush=True)
+        print(f"  {CosmicDesign.STAR} 별자리 특징:", flush=True)
+        print(f"     {characteristics}", flush=True)
+        print(flush=True)
+        print(f"  {CosmicDesign.GALAXY} 오늘의 운세:", flush=True)
         for line in fortune.split('\n'):
-            print(f"     {line}")
-        print()
-        print("·" * 60 + "\n")
+            print(f"     {line}", flush=True)
+        print(flush=True)
+        print("·" * 60 + "\n", flush=True)
 
 
 # ==================== 별자리 정보 데이터베이스 ====================
@@ -252,7 +253,7 @@ FORTUNES = {
     ],
     "전갈자리": [
         "집중력이 최고조에 이르는 시기입니다.",
-        "깊은 통찰력이 문제��� 핵심을 꿰뚫을 것 같습니다.",
+        "깊은 통찰력이 문제의 핵심을 꿰뚫을 것 같습니다.",
         "신비로운 기운이 당신을 감싸고 있습니다.",
         "숨겨진 진실이 드러날 것 같습니다.",
         "강한 의지가 모든 장애물을 극복하게 할 것 같습니다.",
@@ -356,7 +357,7 @@ def get_user_input(prompt, input_type=int):
             value = input_type(input(prompt))
             return value
         except ValueError:
-            print(f"❌ 잘못된 입력입니다. {input_type.__name__} 형식으로 입력해주세요.\n")
+            print(f"❌ 잘못된 입력입니다. {input_type.__name__} 형식으로 입력해주세요.\n", flush=True)
 
 
 # ==================== 메인 프로그램 ====================
@@ -371,7 +372,7 @@ def main():
     while True:
         try:
             # 사용자 입력
-            print("📍 생년월일을 입력해주세요.\n")
+            print("📍 생년월일을 입력해주세요.\n", flush=True)
             year = get_user_input("  연도를 입력하세요 (예: 2010): ", int)
             month = get_user_input("  월을 입력하세요 (1-12): ", int)
             day = get_user_input("  일을 입력하세요 (1-31): ", int)
@@ -380,7 +381,7 @@ def main():
             is_valid, message = is_valid_date(year, month, day)
             
             if not is_valid:
-                print(f"\n❌ {message}\n")
+                print(f"\n❌ {message}\n", flush=True)
                 continue
             
             # 별자리 계산
@@ -393,29 +394,29 @@ def main():
             
             # 추가 정보 출력
             zodiac_data = ZODIAC_INFO[zodiac_sign]
-            print(f"  {CosmicDesign.CONSTELLATION} 별자리 기호: {zodiac_data['symbol']}")
-            print(f"  {CosmicDesign.STAR} 기간: {zodiac_data['period']}")
-            print(f"  {CosmicDesign.PLANET} 행운의 색: {zodiac_data['color']}")
-            print(f"  {CosmicDesign.STAR_SPARKLE} 행운의 숫자: {zodiac_data['lucky_number']}\n")
+            print(f"  {CosmicDesign.CONSTELLATION} 별자리 기호: {zodiac_data['symbol']}", flush=True)
+            print(f"  {CosmicDesign.STAR} 기간: {zodiac_data['period']}", flush=True)
+            print(f"  {CosmicDesign.PLANET} 행운의 색: {zodiac_data['color']}", flush=True)
+            print(f"  {CosmicDesign.STAR_SPARKLE} 행운의 숫자: {zodiac_data['lucky_number']}\n", flush=True)
             
         except KeyboardInterrupt:
-            print("\n\n프로그램을 종료합니다. 안녕히가세요! 👋\n")
+            print("\n\n프로그램을 종료합니다. 안녕히가세요! 👋\n", flush=True)
             break
         except Exception as e:
-            print(f"\n❌ 오류 발생: {e}\n")
+            print(f"\n❌ 오류 발생: {e}\n", flush=True)
             continue
         
         # 반복 여부 확인
         while True:
             again = input("다시 입력하시겠습니까? (네/아니요): ").strip()
             if again.lower() in ["네", "yes", "y"]:
-                print("\n" + "=" * 60 + "\n")
+                print("\n" + "=" * 60 + "\n", flush=True)
                 break
             elif again.lower() in ["아니요", "no", "n"]:
                 CosmicDesign.print_footer()
                 return
             else:
-                print("❌ '네' 또는 '아니요'로 입력해주세요.\n")
+                print("❌ '네' 또는 '아니요'로 입력해주세요.\n", flush=True)
 
 
 if __name__ == "__main__":
